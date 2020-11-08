@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky</title>
+    <style>
+        body, body * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font: normal 12pt 'Helvetica';
+        }
+        body {
+            background: rgb(255,0,0);
+            background: linear-gradient(120deg, rgba(255,0,0,1) 0%, rgba(255,209,0,1) 40%, rgba(176,255,0,1) 100%);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        div.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+            padding: 12pt;
+
+            background-color: rgba(23, 24, 23, 0.342);
+            
+        }
+        div.container div:nth-of-type(n) {
+            padding: 12pt;
+        }
+        div.container div:nth-of-type(n) > * {
+            padding: 6pt;
+            border: none;
+            line-height: 1;
+        }
+        div#roleta, div#resultado {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.formulario {
+            background-color: silver;
+        }
+
+        p.ok {
+            display: block;
+            padding: 20pt;
+            border: black solid 5px; 
+            background-color: green;
+            color: white;
+        }
+        p.next {
+            display: block;
+            padding: 20pt;
+            border: black solid 5px; 
+            background-color: orangered;
+            color: white;
+        }
+        p.and {
+            display: block;
+            padding: 20pt;
+            border: black solid 5px; 
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="formulario">
+            <input type="text" name="pessoaNome" id="pessoaNome">
+            <input type="button" value="Adicionar Nome" name="adicionarNome" id="adicionarNome">
+            <div id="nomesAdicionados"></div>
+        </div>
+        <div class="roleta" id="roleta">
+            <span>Aqui aparecerá o nome sorteado....</span>
+        </div>
+        <div class="formularioRoleta">
+            <input type="button" value="Rodar a Roleta" nome="botaoSortearNomes" id="botaoSortearNomes">
+        </div>
+        <div class="resultado" id="resultado">
+            <span>Aqui vai o resultado...</span>
+        </div>
+    </div>
+
+    <script src="./lucky.js"></script>
+</body>
+</html>
